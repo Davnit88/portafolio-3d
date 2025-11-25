@@ -1,0 +1,18 @@
+# Dependencias de Node (¡Nunca subir esto, pesa mucho!)
+node_modules/
+npm-debug.log
+
+# Archivos de construcción
+dist/
+build/
+
+# Variables de entorno (Claves secretas)
+.env
+.env.local
+
+# Archivos del sistema
+.DS_Store
+Thumbs.db
+
+# Backups de Blender (opcional)
+*.blend1

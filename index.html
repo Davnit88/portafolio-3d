@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daferchi Estudio | Tecnología de Seguridad</title>
+    <style>
+        /* --- PALETA DE COLORES (Tu Identidad) --- */
+        :root {
+            --panda-orange: #FF5733;  /* Energía / Alerta */
+            --tech-grey: #1a1a1a;     /* Fondo Oscuro */
+            --bonsai-green: #2C3E50;  /* Estructura */
+            --text-white: #f0f0f0;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+
+        body {
+            background-color: var(--tech-grey);
+            color: var(--text-white);
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            background-image: 
+                linear-gradient(rgba(26, 26, 26, 0.95), rgba(26, 26, 26, 0.95)),
+                url('https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?q=80&w=2070&auto=format&fit=crop'); /* Textura de código de fondo */
+            background-size: cover;
+        }
+
+        /* --- EL LOGO (Placeholder Geométrico) --- */
+        .logo-container {
+            width: 120px;
+            height: 120px;
+            border: 3px solid var(--panda-orange);
+            border-radius: 50%; /* Círculo */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 2rem;
+            position: relative;
+            box-shadow: 0 0 20px rgba(255, 87, 51, 0.2);
+        }
+
+        .logo-icon {
+            font-size: 3rem;
+            font-weight: bold;
+            color: var(--panda-orange);
+        }
+
+        /* --- TIPOGRAFÍA --- */
+        h1 {
+            font-size: 3.5rem;
+            text-transform: uppercase;
+            letter-spacing: 5px;
+            margin-bottom: 0.5rem;
+            background: linear-gradient(to right, #fff, #ccc);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        h2 {
+            font-size: 1.2rem;
+            font-weight: 300;
+            color: var(--panda-orange);
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            margin-bottom: 3rem;
+        }
+
+        /* --- BARRA DE CARGA (Efecto "Desplegando") --- */
+        .loader-container {
+            width: 300px;
+            height: 4px;
+            background: #333;
+            border-radius: 2px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .loader-bar {
+            width: 50%;
+            height: 100%;
+            background: var(--panda-orange);
+            position: absolute;
+            animation: loading 2s infinite ease-in-out;
+            box-shadow: 0 0 10px var(--panda-orange);
+        }
+
+        .status-text {
+            margin-top: 1rem;
+            font-size: 0.8rem;
+            color: #888;
+            font-family: 'Courier New', Courier, monospace;
+        }
+
+        /* --- ANIMACIONES --- */
+        @keyframes loading {
+            0% { left: -50%; }
+            100% { left: 100%; }
+        }
+
+        /* --- RESPONSIVE (Para celular) --- */
+        @media (max-width: 600px) {
+            h1 { font-size: 2rem; }
+            .logo-container { width: 80px; height: 80px; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="logo-container">
+        <div class="logo-icon">D</div>
+    </div>
+
+    <h1>DAFERCHI</h1>
+    <h2>Estudio de Tecnología</h2>
+
+    <div class="loader-container">
+        <div class="loader-bar"></div>
+    </div>
+    <p class="status-text">> DESPLEGANDO INFRAESTRUCTURA FULGENS v1.0...</p>
+
+    <div style="position: absolute; bottom: 30px; font-size: 0.7rem; color: #555;">
+        DAFERCHI ESTUDIO S.A.S. &copy; 2025 | BOGOTÁ, COLOMBIA
+    </div>
+
+</body>
+</html>
