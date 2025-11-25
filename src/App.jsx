@@ -1,7 +1,7 @@
 import React, { useRef, useEffect } from 'react'
 import { Canvas, useFrame } from '@react-three/fiber'
 import { OrbitControls, Stars, useGLTF, Environment, ContactShadows, useAnimations } from '@react-three/drei'
-
+import { Loader } from '@react-three/drei'
 function EscenaPalomitas() {
   const group = useRef()
   // 1. Extraemos también las 'animations' del archivo
@@ -32,7 +32,7 @@ function EscenaPalomitas() {
 }
 
 export default function App() {
-  return (
+  return (<>
     <div style={{ width: '100vw', height: '100vh', background: '#1a1a1a' }}>
       <Canvas camera={{ position: [0, 2, 6], fov: 50 }}>
         
@@ -51,5 +51,13 @@ export default function App() {
         <OrbitControls autoRotate autoRotateSpeed={0.5} />
       </Canvas>
     </div>
+    {/* ESTO AGREGA LA BARRA DE CARGA AUTOMÁTICA */}
+      <Loader 
+        containerStyles={{ background: 'black', zIndex: 10000 }} // Fondo negro tapa todo
+        innerStyles={{ width: '300px', height: '10px', background: '#333' }} // Barra vacía
+        barStyles={{ background: '#00ffcc', height: '100%' }} // Barra llena
+        dataStyles={{ color: '#00ffcc', fontSize: '1.2rem', fontFamily: 'monospace' }} // Texto %
+      />
+    </>
   )
 }
