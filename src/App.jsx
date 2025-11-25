@@ -12,14 +12,15 @@ function EscenaPalomitas() {
 
   // 3. ¡ACCIÓN! Al cargar, buscamos la primera animación y le damos Play
   useEffect(() => {
-    // Si el archivo tiene animaciones...
-    if (actions && Object.keys(actions).length > 0) {
-      // Tomamos la primera animación de la lista (no importa como se llame)
-      const primeraAnimacion = Object.keys(actions)[0]
-      
-      // La reproducimos suavemente
-      actions[primeraAnimacion].reset().fadeIn(0.5).play()
-    }
+    // Recorremos cada acción dentro del diccionario 'actions'
+    Object.values(actions).forEach((accion) => {
+      // Le damos play a cada una
+      accion.reset().fadeIn(0.5).play()
+    })
+    
+    // Opcional: Si quieres ver los nombres en la consola para debuguear
+    console.log("Animaciones encontradas:", Object.keys(actions))
+    
   }, [actions])
 
   useFrame((state) => {
